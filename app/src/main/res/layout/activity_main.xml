@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/Layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF009688"
+    android:layout_centerHorizontal="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/current_date"
+        android:layout_width="357dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:background="#CDDC39"
+        android:layout_marginTop="100dp"
+        android:text="Current Date"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/date_view"
+        android:layout_width="357dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/current_date"
+        android:gravity="center"
+        android:background="#CDDC39"
+        android:layout_marginTop="20dp"
+        android:text="Set the Date"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <!-- Add CalenderView to display the Calender -->
+    <CalendarView
+        android:id="@+id/calender"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="#9ED9CCFF"
+        android:layout_marginLeft="30dp"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_view">
+    </CalendarView>
+
+    <TextView
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+        android:text="Night Mode"
+        android:id="@+id/nighttext"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/calender"
+        android:layout_marginTop="50dp">
+
+    </TextView>
+
+    <Switch
+        android:id="@+id/nightmode"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/nighttext"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="130dp"
+        android:checked="false">
+        </Switch>
+    
+
+
+</RelativeLayout>
