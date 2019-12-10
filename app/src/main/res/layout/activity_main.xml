@@ -31,21 +31,53 @@
         android:gravity="center"
         android:background="#CDDC39"
         android:layout_marginTop="20dp"
-        android:text="Set the Date"
+        android:text="Select Date"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/event_view"
+        android:layout_width="357dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/date_view"
+        android:gravity="center"
+        android:background="#CDDC39"
+        android:text="Event"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/monthview"
+        android:layout_width="357dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/event_view"
+        android:gravity="center"
+        android:text="Month-Year Indicator"
+        android:background="#CDDC39"
+        android:layout_marginTop="20dp"
         android:textColor="@android:color/background_dark"
         android:textStyle="bold" />
 
     <!-- Add CalenderView to display the Calender -->
-    <CalendarView
-        android:id="@+id/calender"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:background="#9ED9CCFF"
-        android:layout_marginLeft="30dp"
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/compactcalendar_view"
         android:layout_width="357dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/date_view">
-    </CalendarView>
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/monthview"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="250dp"
+        app:compactCalendarTargetHeight="250dp"
+        app:compactCalendarTextSize="12sp"
+        app:compactCalendarBackgroundColor="#faa094ff"
+        app:compactCalendarTextColor="#fff"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#FF009688"
+        app:compactCalendarCurrentDayBackgroundColor="#B71C1C"
+        app:compactCalendarMultiEventIndicatorColor="#fff"
+        />
 
     <TextView
         android:layout_width="420dp"
@@ -54,7 +86,7 @@
         android:id="@+id/nighttext"
         android:textSize="20dp"
         android:gravity="center_horizontal"
-        android:layout_below="@id/calender"
+        android:layout_below="@id/compactcalendar_view"
         android:layout_marginTop="50dp">
 
     </TextView>
